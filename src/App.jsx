@@ -23,6 +23,7 @@ function App() {
   const {tema} = useContext(TemaContext);
   
   return (
+    // Verificar se a classe é do tema-escuro
     <div className={`App ${tema === "escuro" ? "tema-escuro" : ""}`}>
     
       <div className="container-cabecalho">

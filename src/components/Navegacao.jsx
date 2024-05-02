@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 function Navegacao(props){
 
+    useEffect(() => {
+        // Mostra a renderização do componente, depois de alterar o estado de props.categoriaSelecionada.
+        console.log("Categoria selecionada: ", props.categoriaSelecionada);
+    },); 
+    
     return( 
         <>
             <div className="navegacao">

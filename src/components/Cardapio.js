@@ -104,7 +104,7 @@ const empada = {
 const pastel = {
     imagem: pastelImg,
     id: 11,
-    nome: "Pasteis",
+    nome: "Pastel",
     preco: "R$ 2,50",
     descricao: "Pastel Sabores: Queijo, Carne, Frango e Queijo c/ Presunto",
 };
@@ -136,7 +136,7 @@ const xbacon= {
     id: 15,
     nome: "X-Bacon",
     preco: "R$ 10,00",
-    descricao: "Contém: Pão, Hamburguer de Carne, Queijo Cheddar, Presunto, Ovo, Bacon e Salada ",
+    descricao: "Contém: Pão, Hamburguer de Carne, Queijo Cheddar, Presunto, Ovo e Bacon",
 };
 const xfrango = {
     imagem: xFrangoImg,
