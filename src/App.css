@@ -15,7 +15,7 @@
   margin-bottom: 20px; 
 }
 
-.logo-1 {
+.logo {
   width: 200px;
   height: auto;
   padding: 0.5em;
@@ -176,7 +176,7 @@
   background-image: url('./assets/img/icons8-configuração-50-branca.png'); 
 }
 
-.info-de-desenvolvimento {
+.informacoes {
   font-family:'Ubuntu', sans-serif;
   display: flex;
   flex-direction: column;
@@ -184,7 +184,7 @@
 }
 
 .dev{
-  margin-top: 50px;
+  margin-top: 20px;
   font-size: 20px;
 }
 
@@ -204,5 +204,10 @@ a{
 
 .direitos{
   margin-top: 1rem;
+  font-size: 0.8em;
+}
+
+.ilustrativas{
+  margin-top: 3rem;
   font-size: 0.8em;
 }

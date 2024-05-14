@@ -1,5 +1,6 @@
-import React, { useContext, useState } from 'react'
-import LogoFicticia from "./assets/logo/img-logo_ficticia_projeto.png"
+import React, { useContext, useState, useEffect } from 'react'
+import LogoFicticiaClaro from "./assets/logo/img-logo_ficticia_projeto.png"
+import LogoFicticiaEscuro from "./assets/logo/img-logo_ficticia_projeto-branca.png"
 import Navegacao from "./components/Navegacao"
 import ItemDoCardapio from "./components/ItemDoCardapio"
 import Configuracao from "./components/Configuracao"
@@ -21,9 +22,16 @@ function App() {
   };
 
   const {tema} = useContext(TemaContext);
+  const [logoUrl, setLogoUrl] = useState(tema === "escuro" ? LogoFicticiaEscuro : LogoFicticiaClaro);
 
   // Aplicar classe de tema escuro ao corpo do documento
   document.body.className = tema === "escuro" ? "tema-escuro" : "";
+
+  // Atualiza a URL da imagem da logo quando o tema muda
+  useEffect(() => {
+    setLogoUrl(tema === "escuro" ? LogoFicticiaEscuro : LogoFicticiaClaro);
+    console.log("Tema atual: ",tema);
+  }, [tema]);
   
   return (
     // Verificar se a classe é do tema-escuro
@@ -32,7 +40,7 @@ function App() {
       <div className="container-cabecalho">
 
         <div className="container-logo">
-          <img src={LogoFicticia} alt="Logo da Lanchonete Hora do Lanche" className="logo-1" />
+          <img src={logoUrl} alt="Logo da Lanchonete Hora do Lanche" className="logo" />
         </div>
 
         <div className="container-titulo">
@@ -55,7 +63,8 @@ function App() {
         {navegacaoMenu[categoriaSelecionada].map(item => <ItemDoCardapio key={item.id} imagem={item.imagem} nome={item.nome} preco={item.preco} descricao={item.descricao} />)}
       </div>
 
-      <div className="info-de-desenvolvimento">
+      <div className="informacoes">
+        <p className="ilustrativas"> Imagens meramente ilustrativas. </p>
         <h2 className="dev">Desenvolvedor:</h2>
         <h6 className="nome">Pedro Lucas</h6>
         <p className="git">

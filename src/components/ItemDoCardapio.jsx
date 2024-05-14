@@ -6,7 +6,7 @@ function ItemDoCardapio(props){
             <img src={props.imagem} className="img-item-cardapio" />
             <div className="informacoes-do-cardapio">
                 <h2>{props.nome}</h2>
-                <p>{props.preco}</p>
+                <h3>{props.preco}</h3>
                 <p>Descrição:</p>
                 <p>{props.descricao}</p>
             </div>
