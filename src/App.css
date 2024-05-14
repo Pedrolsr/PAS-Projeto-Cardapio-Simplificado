@@ -1,3 +1,7 @@
+.body{
+  display: flex;
+}
+
 .container-cabecalho {
   position: relative;
   display: flex;
@@ -83,7 +87,7 @@
 
 .container-item-cardapio {
   font-family: 'Ubuntu', sans-serif;
-  display: block;
+  display: flex;
   width: 20rem;
   padding: 0.5rem;
   justify-content: space-between;
@@ -162,8 +166,43 @@
   display: block; 
 }
 
-.tema-escuro,
-.tema-escuro a{
+.tema-escuro, botao-configuracao {
   background-color: #333;
   color: #e5e5e5;
+}
+
+.tema-escuro .botao-configuracao {
+  /* imagem para o tema escuro */
+  background-image: url('./assets/img/icons8-configuração-50-branca.png'); 
+}
+
+.info-de-desenvolvimento {
+  font-family:'Ubuntu', sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.dev{
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.nome{
+  font-size: 15px;
+  margin: 1%;
+}
+
+.git{
+  margin: 0%;
+  font-size: 15px;
+}
+
+a{
+  color: blue;
+}
+
+.direitos{
+  margin-top: 1rem;
+  font-size: 0.8em;
 }

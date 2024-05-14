@@ -21,10 +21,13 @@ function App() {
   };
 
   const {tema} = useContext(TemaContext);
+
+  // Aplicar classe de tema escuro ao corpo do documento
+  document.body.className = tema === "escuro" ? "tema-escuro" : "";
   
   return (
     // Verificar se a classe é do tema-escuro
-    <div className={`App ${tema === "escuro" ? "tema-escuro" : ""}`}>
+    <div className="App">
     
       <div className="container-cabecalho">
 
@@ -38,7 +41,7 @@ function App() {
         </div>
 
         <div className="container-botao">
-          <button className="botao-configuracao" onClick={infoBotaoClick}></button>
+          <button className={`botao-configuracao ${tema === "escuro" ? "tema-escuro" : ""}`} onClick={infoBotaoClick}></button>
           <Configuracao menuConfig={menuConfig} />
         </div>
 
@@ -50,6 +53,16 @@ function App() {
 
       <div className="menu">
         {navegacaoMenu[categoriaSelecionada].map(item => <ItemDoCardapio key={item.id} imagem={item.imagem} nome={item.nome} preco={item.preco} descricao={item.descricao} />)}
+      </div>
+
+      <div className="info-de-desenvolvimento">
+        <h2 className="dev">Desenvolvedor:</h2>
+        <h6 className="nome">Pedro Lucas</h6>
+        <p className="git">
+          Github: 
+          <a href="https://github.com/Pedrolsr"> github.com/Pedrolsr </a>
+        </p>
+        <p className="direitos">Todos os direitos reservados.</p>
       </div>
     
     </div>
